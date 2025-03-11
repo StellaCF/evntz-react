@@ -1,0 +1,102 @@
+{
+  "events": [
+    {
+      "id": "d106",
+      "title": "title",
+      "description": "description",
+      "medium": "in-person",
+      "meetLink": null,
+      "address": "awka anambra",
+      "startDate": "2025-01-30",
+      "startTime": "09:00",
+      "endDate": "2025-01-30",
+      "endTime": "16:00",
+      "duration": "7",
+      "category": "social ",
+      "image": "http://res.cloudinary.com/dhjh9soip/image/upload/v1737645360/yol0d6d7gweyrnoixo9u.png",
+      "tickets": [
+        {
+          "name": "VIP ",
+          "price": "10000",
+          "quantity": "19"
+        }
+      ]
+    },
+    {
+      "id": "a4b4",
+      "title": "UNBOXED PARTY",
+      "description": "party till mama call, but the mama is partying with us",
+      "medium": "online",
+      "meetLink": "https://tailwindui.com/components#pricing",
+      "address": null,
+      "startDate": "2025-01-30",
+      "startTime": "17:06",
+      "endDate": "2025-01-30",
+      "endTime": "17:10",
+      "duration": "5",
+      "category": "music",
+      "image": "http://res.cloudinary.com/dhjh9soip/image/upload/v1737648335/p3aqxgsrtmw9ypcl3u6u.gif",
+      "tickets": [
+        {
+          "name": "vip",
+          "price": "1000",
+          "quantity": "90"
+        }
+      ]
+    },
+    {
+      "id": "9475",
+      "title": "Music Fest",
+      "description": "soul music",
+      "medium": "in-person",
+      "meetLink": null,
+      "address": "Omah Event Center",
+      "startDate": "2025-01-29",
+      "startTime": "16:30",
+      "endDate": "2025-01-30",
+      "endTime": "06:00",
+      "duration": "10",
+      "category": "music",
+      "image": "http://res.cloudinary.com/dhjh9soip/image/upload/v1737728439/hrsnfkwlmnyagm9sq9w4.png",
+      "tickets": []
+    },
+    {
+      "id": "97d4",
+      "userId": "a3rbphoUi7WDfkvGD6NaAyLkVc02",
+      "title": "Val Fest",
+      "description": "Season of Love",
+      "medium": "in-person",
+      "meetLink": null,
+      "address": "Uncle Reuben",
+      "startDate": "2025-02-14",
+      "startTime": "17:00",
+      "endDate": "2025-02-14",
+      "endTime": "23:00",
+      "duration": "5",
+      "category": "social",
+      "organiser": "Emmanowell",
+      "image": "http://res.cloudinary.com/dhjh9soip/image/upload/v1738061638/kevlwszbahdfxkdlnsuc.png",
+      "tickets": [],
+      "addedby": "dave"
+    },
+    {
+      "id": "3079",
+      "userId": "aW4LdNO70aQxfwj2PWWh39k4mR03",
+      "title": "best event",
+      "description": "best event of the season",
+      "medium": "in-person",
+      "meetLink": null,
+      "address": "kodex",
+      "startDate": "2025-02-28",
+      "startTime": "21:00",
+      "endDate": "2025-02-28",
+      "endTime": "23:00",
+      "duration": "2",
+      "category": "tech",
+      "organiser": "Phakulty",
+      "image": "http://res.cloudinary.com/dhjh9soip/image/upload/v1740670147/gggxwbm8eqi6ar0hcoyp.webp",
+      "tickets": [],
+      "addedby": "best"
+    }
+  ]
+}
