@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import img1 from './assets/img.jpg'
 import img2 from './assets/security.gif'
@@ -16,7 +16,7 @@ const OnBoard = () => {
     {title: "Easy Attendee anagement", content: "Keep track of attendees using our comprehensive attendees management feature. Easily view and manage RSVPs, track attendance and collect essential participants information. Scan QR codes to check in attendees and ensure a smooth event experience for all participants."},
   ]
 
-  const {user, userDetails} = useAuth() || {};
+  const {user} = useAuth() || {};
   const navigate = useNavigate();
 
   const handleDashboard = () => {

@@ -97,45 +97,44 @@ const Dashboard = () => {
   }, [])
 
   return (
-    <div>
-      <div className="h-screen flex sticky">
-          <Sidebar/>     
-        <main className='w-full overflow-y-auto scrollbar-hide'>
-          <div className=' w-full px-4 py-6'>
+    <div className="h-screen flex">
+        <Sidebar/>  
+        <div className='w-full h-full overflow-y-auto flex-1 bg-[#f3f2f2] px-12'>
+          <div className=' w-full mt-12'>
             <h2 className='text-2xl font-semibold'>Dashboard</h2>
           </div>
-          <section className='lg:flex gap-10 mt-16 md:flex-wrap w-10/12 mx-auto sm: w-11/12 mx-auto '>
-            <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-center text-lg'>TOTAL EVENTS ADDED</span>
-              <p className='text-center pb-6 text-8xl'>{eventCounts.totalEvents}</p>
-            </div>
-            <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-lg'>OFFLINE EVENTS ADDED</span>
-              <p className='text-center pb-6 text-8xl'>{eventCounts.offlineEvents}</p>
-            </div>
-            <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-lg'>ONLINE EVENTS ADDED</span>
-              <p className='text-center pb-6 text-8xl'>{eventCounts.onlineEvents}</p>
-            </div>
-          </section>
-          {/* booked events */}
-          <section className='lg:flex gap-10 mt-24 md:flex-wrap w-10/12 mx-auto sm: w-11/12 mx-auto'>
-            <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>TOTAL BOOKED EVENTS</span>
-              <p className='text-center pb-6 text-8xl'>{counts.totalBookings}</p>
-            </div>
-            <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>BOOKED OFFLINE EVENTS</span>
-              <p className='text-center pb-6 text-8xl'>{counts.offlineBookings}</p>
-            </div>
-            <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
-              <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>BOOKED ONLINE EVENTS</span>
-              <p className='text-center pb-6 text-8xl'>{counts.onlineBookings}</p>
-            </div>
-          </section>
-        </main>
-      </div>
-      
+          <main className='w-full mt-8 border p-8 bg-white rounded-xl'>
+            <section className='lg:flex gap-10 mt-16 md:flex-wrap w-10/12 mx-auto sm:w-11/12'>
+              <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-center text-lg'>TOTAL EVENTS ADDED</span>
+                <p className='text-center pb-6 text-8xl'>{eventCounts.totalEvents}</p>
+              </div>
+              <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-lg'>OFFLINE EVENTS ADDED</span>
+                <p className='text-center pb-6 text-8xl'>{eventCounts.offlineEvents}</p>
+              </div>
+              <div className='rounded shadow-2xl shadow-pink-200 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-[#eb0d66] rounded p-3 text-white text-lg'>ONLINE EVENTS ADDED</span>
+                <p className='text-center pb-6 text-8xl'>{eventCounts.onlineEvents}</p>
+              </div>
+            </section>
+            {/* booked events */}
+            <section className='lg:flex gap-10 mt-24 md:flex-wrap w-10/12 mx-auto sm:w-11/12'>
+              <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>TOTAL BOOKED EVENTS</span>
+                <p className='text-center pb-6 text-8xl'>{counts.totalBookings}</p>
+              </div>
+              <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>BOOKED OFFLINE EVENTS</span>
+                <p className='text-center pb-6 text-8xl'>{counts.offlineBookings}</p>
+              </div>
+              <div className='rounded shadow-2xl shadow-cyan-100 h-48 w-2xs flex flex-col justify-between'>
+                <span className='w-full bg-cyan-950 rounded p-3 text-white text-lg'>BOOKED ONLINE EVENTS</span>
+                <p className='text-center pb-6 text-8xl'>{counts.onlineBookings}</p>
+              </div>
+            </section>
+          </main>
+        </div>
     </div>
   );
 };

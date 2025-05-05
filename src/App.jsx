@@ -14,9 +14,14 @@ import Invitees from './components/dashboardcomponents/Invitees'
 import UserProfile from './components/dashboardcomponents/UserProfile'
 import Create from './components/dashboardcomponents/Create'
 import EventDetails from './components/EventDetails'
+import { useContext } from 'react'
+import { useAuth } from './AuthContext'
+
 
 function App() {
+  const { loading } = useAuth();
 
+if (loading) return <div>Loading...</div>;
   return (
     <div className='font-poppins'>
      

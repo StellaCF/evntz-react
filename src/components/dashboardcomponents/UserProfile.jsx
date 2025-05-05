@@ -70,150 +70,155 @@ const UserProfile = () => {
    <div>
       <div className="h-screen flex">
         <Sidebar />
-        <main className='w-full overflow-y-auto scrollbar-hide h-viewheight flex items-center'>
-            <div className='w-2/5 mx-auto h-4/5'>
-               <div className='w-full '>
-                  <h3 className='text-center text-xl font-extrabold'>Hello, {userDetails.name}</h3>
-               </div>
-               <form onSubmit={handleSubmit} className="space-y-6 mt-6">
-               {/* Name Field */}
-               <div className='flex flex-col gap-2'>
-                  <label className="block text-md font-medium text-gray-700">
-                     Name
-                  </label>
-                  <input
-                     type="text"
-                     name="name"
-                     value={formData.name}
-                     onChange={handleChange}
-                     readOnly={isReadOnly}
-                     className={`w-full p-2 border outline-none ${
-                     isReadOnly ? "bg-gray-100" : "bg-white"
-                     } border-gray-300 rounded`}
-                  />
-               </div>
-
-               {/* Email Field */}
-               <div className='flex flex-col gap-2'>
-                  <label className="block text-md font-medium text-gray-700">
-                     Email
-                  </label>
-                  <input
-                     type="email"
-                     name="email"
-                     value={formData.email}
-                     onChange={handleChange}
-                     readOnly={isReadOnly}
-                     className={`w-full p-2 border outline-none ${
-                     isReadOnly ? "bg-gray-100" : "bg-white"
-                     } border-gray-300 rounded`}
-                  />
-               </div>
-
-               {/* Phone Field */}
-               <div className='flex flex-col gap-2'>
-                  <label className="block text-md font-medium text-gray-700">
-                     Phone
-                  </label>
-                  <input
-                     type="text"
-                     name="phone"
-                     value={formData.phone}
-                     onChange={handleChange}
-                     readOnly={isReadOnly}
-                     className={`w-full p-2 border outline-none ${
-                     isReadOnly ? "bg-gray-100" : "bg-white"
-                     } border-gray-300 rounded`}
-                  />
-               </div>
-
-               {showAccountForm && (
-                   <div className='space-y-6'>
-                  <div className='flex flex-col gap-2'>
-                     <label className="block text-md font-medium text-gray-700">
-                        Bank Name
-                     </label>
-                     <input
-                        type="text"
-                        name="bank"
-                        value={formData.bank}
-                        onChange={handleChange}
-                        readOnly={isReadOnly}
-                        className={`w-full p-2 border outline-none ${
-                        isReadOnly ? "bg-gray-100" : "bg-white"
-                        } border-gray-300 rounded`}
-                     />
-                  </div>
-                  <div className='flex flex-col gap-2'>
-                     <label className="block text-md font-medium text-gray-700">
-                        Account Name
-                     </label>
-                     <input
-                        type="text"
-                        name="acctName"
-                        value={formData.acctName}
-                        onChange={handleChange}
-                        readOnly={isReadOnly}
-                        className={`w-full p-2 border outline-none ${
-                        isReadOnly ? "bg-gray-100" : "bg-white"
-                        } border-gray-300 rounded`}
-                     />
-                  </div>
-                  <div className='flex flex-col gap-2'>
-                     <label className="block text-md font-medium text-gray-700">
-                        Account Number
-                     </label>
-                     <input
-                        type="number"
-                        name="acctNum"
-                        value={formData.acctNum}
-                        onChange={handleChange}
-                        readOnly={isReadOnly}
-                        className={`w-full p-2 border outline-none ${
-                        isReadOnly ? "bg-gray-100" : "bg-white"
-                        } border-gray-300 rounded`}
-                     />
-                  </div>
-               </div>
-               )}
-
-               {!isAccountSaved && (
-                  <button
-                     type="button"
-                     onClick={toggleAccountForm}
-                     disabled={isReadOnly}
-                     className={`px-4 py-2 rounded ${
-                        isReadOnly
-                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        : "bg-blue-600 text-white"
-                     }`}
-                  >
-                     Add Acct.
-                  </button>
-               )}
-              
-
-               {/* Action Buttons */}
-               <div className="flex justify-center mt-6 gap-4">
-                  <button
-                     type="button"
-                     onClick={toggleEdit}
-                     className="bg-[#eb0d66] text-white px-4 py-2 rounded"
-                  >
-                     {isReadOnly ? "Update Profile" : "Cancel"}
-                  </button>
-                  {!isReadOnly && (
-                     <button
-                     type="submit"
-                     className="bg-cyan-950 text-white px-4 py-2 rounded"
-                     >
-                     Save
-                     </button>
-                  )}
-               </div>
-               </form>
+         <div className='w-full bg-[#f3f2f2] h-screen px-12'>
+            <div className=' w-full mt-12 px-10'>
+                  <h2 className='text-2xl font-semibold'>Profile</h2>
             </div>
-        </main>
+            <main className='w-full px-2 bg-white mt-8 border overflow-y-auto scrollbar-hide h-full flex items-center'>
+                  <div className='w-full md:w-3/5 lg:w-2/5 mx-auto h-4/5'>
+                     <div className='w-full '>
+                        <h3 className='text-center text-xl font-extrabold'>Hello, {user?.name}</h3>
+                     </div>
+                     <form onSubmit={handleSubmit} className="space-y-6 mt-6">
+                     {/* Name Field */}
+                     <div className='flex flex-col gap-2'>
+                        <label className="block text-md font-medium text-gray-700">
+                           Name
+                        </label>
+                        <input
+                           type="text"
+                           name="name"
+                           value={formData.name}
+                           onChange={handleChange}
+                           readOnly={isReadOnly}
+                           className={`w-full p-2 border outline-none ${
+                           isReadOnly ? "bg-gray-100" : "bg-white"
+                           } border-gray-300 rounded`}
+                        />
+                     </div>
+
+                     {/* Email Field */}
+                     <div className='flex flex-col gap-2'>
+                        <label className="block text-md font-medium text-gray-700">
+                           Email
+                        </label>
+                        <input
+                           type="email"
+                           name="email"
+                           value={formData.email}
+                           onChange={handleChange}
+                           readOnly={isReadOnly}
+                           className={`w-full p-2 border outline-none ${
+                           isReadOnly ? "bg-gray-100" : "bg-white"
+                           } border-gray-300 rounded`}
+                        />
+                     </div>
+
+                     {/* Phone Field */}
+                     <div className='flex flex-col gap-2'>
+                        <label className="block text-md font-medium text-gray-700">
+                           Phone
+                        </label>
+                        <input
+                           type="text"
+                           name="phone"
+                           value={formData.phone}
+                           onChange={handleChange}
+                           readOnly={isReadOnly}
+                           className={`w-full p-2 border outline-none ${
+                           isReadOnly ? "bg-gray-100" : "bg-white"
+                           } border-gray-300 rounded`}
+                        />
+                     </div>
+
+                     {showAccountForm && (
+                        <div className='space-y-6'>
+                        <div className='flex flex-col gap-2'>
+                           <label className="block text-md font-medium text-gray-700">
+                              Bank Name
+                           </label>
+                           <input
+                              type="text"
+                              name="bank"
+                              value={formData.bank}
+                              onChange={handleChange}
+                              readOnly={isReadOnly}
+                              className={`w-full p-2 border outline-none ${
+                              isReadOnly ? "bg-gray-100" : "bg-white"
+                              } border-gray-300 rounded`}
+                           />
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                           <label className="block text-md font-medium text-gray-700">
+                              Account Name
+                           </label>
+                           <input
+                              type="text"
+                              name="acctName"
+                              value={formData.acctName}
+                              onChange={handleChange}
+                              readOnly={isReadOnly}
+                              className={`w-full p-2 border outline-none ${
+                              isReadOnly ? "bg-gray-100" : "bg-white"
+                              } border-gray-300 rounded`}
+                           />
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                           <label className="block text-md font-medium text-gray-700">
+                              Account Number
+                           </label>
+                           <input
+                              type="number"
+                              name="acctNum"
+                              value={formData.acctNum}
+                              onChange={handleChange}
+                              readOnly={isReadOnly}
+                              className={`w-full p-2 border outline-none ${
+                              isReadOnly ? "bg-gray-100" : "bg-white"
+                              } border-gray-300 rounded`}
+                           />
+                        </div>
+                     </div>
+                     )}
+
+                     {!isAccountSaved && (
+                        <button
+                           type="button"
+                           onClick={toggleAccountForm}
+                           disabled={isReadOnly}
+                           className={`px-4 py-2 rounded ${
+                              isReadOnly
+                              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                              : "bg-cyan-950 text-white"
+                           }`}
+                        >
+                           Add Acct.
+                        </button>
+                     )}
+                  
+
+                     {/* Action Buttons */}
+                     <div className="flex justify-center mt-6 gap-4">
+                        <button
+                           type="button"
+                           onClick={toggleEdit}
+                           className="bg-[#eb0d66] text-white px-4 py-2 rounded"
+                        >
+                           {isReadOnly ? "Update Profile" : "Cancel"}
+                        </button>
+                        {!isReadOnly && (
+                           <button
+                           type="submit"
+                           className="bg-cyan-950 text-white px-4 py-2 rounded"
+                           >
+                           Save
+                           </button>
+                        )}
+                     </div>
+                     </form>
+                  </div>
+            </main>
+         </div>
       </div>
     </div>
     
