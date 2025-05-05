@@ -68,9 +68,6 @@ Smart Event Manager is open-source and welcomes contributions! Feel free to fork
 
 ## Live Demo & Download
 
-- Visit the live app: [https://youreventsite.com](https://youreventsite.com)
-- Get the latest version on the [Releases page](https://github.com/yourusername/smart-event-manager/releases)
-
 ## License
 
 Smart Event Manager is licensed under the MIT license.
